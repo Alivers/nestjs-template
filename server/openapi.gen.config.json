@@ -1,0 +1,9 @@
+{
+  "npmVersion": "0.0.1",
+  "snapshot": false,
+  "supportsES6": true,
+  "allowUnicodeIdentifiers": true,
+  "prependFormOrBodyParameters": true,
+  "modelPropertyNaming": "original",
+  "npmName": "client-sdk"
+}
