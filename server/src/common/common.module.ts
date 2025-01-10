@@ -1,12 +1,13 @@
+import { AuthGuard } from '@/common/auth/auth.guard';
+import { SingleFlight } from '@/common/tools/singleflight';
+import { ConfigService } from '@/infrastructure/config/config.service';
 import { Global, Module } from '@nestjs/common';
-import { AuthGuard } from './auth/auth.guard';
 import { JwtModule } from '@nestjs/jwt';
-import { ConfigService } from '../infrastructure/config/config.service';
 
 @Global()
 @Module({
-  providers: [AuthGuard],
-  exports: [AuthGuard],
+  providers: [AuthGuard, SingleFlight],
+  exports: [AuthGuard, SingleFlight],
   imports: [
     JwtModule.registerAsync({
       useFactory: (conf: ConfigService) => {
