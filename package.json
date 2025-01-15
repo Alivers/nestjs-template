@@ -13,7 +13,7 @@
     "start:debug": "nest start --tsc --debug --watch | pino-pretty -t 'SYS:yyyy-mm-dd HH:MM:ss.l o'",
     "start:prod": "node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
-    "gen:client": "openapi-generator-cli generate -g typescript-axios -i http://127.0.0.1:3000/api-json -o ../client-sdk -c ./openapi.gen.config.json"
+    "gen:client": "openapi-generator-cli generate -g typescript-axios -i http://127.0.0.1:3000/api-json -o ./generated -c ./openapi.gen.config.json"
   },
   "dependencies": {
     "@fastify/cookie": "^9.4.0",
